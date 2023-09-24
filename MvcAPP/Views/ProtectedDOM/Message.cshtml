@@ -1,0 +1,24 @@
+﻿<h2 id="title" class="text-center">Protected DOM Message Displayer</h2>
+
+<!-- Hidden span to hold the user message -->
+<span id="userMessage" style="display:none;">@ViewBag.EncodedMsg</span>
+
+<script>
+    var userMessageElement = document.getElementById('userMessage');
+    var userMessage = userMessageElement.textContent || userMessageElement.innerText;
+    if (userMessage) {
+        document.write(userMessage);
+    }
+</script>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="get" action="/ProtectedDOM/Message">
+            <div class="form-group">
+                <label for="msg">Enter your message:</label>
+                <input type="text" class="form-control" name="msg" id="msg" placeholder="Your message here...">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Display Message">
+        </form>
+    </div>
+</div>

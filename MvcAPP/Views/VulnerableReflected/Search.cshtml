@@ -1,0 +1,16 @@
+﻿<h2 id="title" class="text-center">Vulnerable Reflected Search</h2>
+
+<h3 class="my-3">You searched for: @Html.Raw(ViewBag.Term)</h3>
+
+<!-- Search form -->
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="get" action="/VulnerableReflected/Search">
+            <div class="form-group">
+                <label for="term">Search:</label>
+                <input type="text" class="form-control" name="term" id="term" required>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+    </div>
+</div>

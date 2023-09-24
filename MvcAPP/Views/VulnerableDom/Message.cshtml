@@ -1,0 +1,20 @@
+﻿<h2 id="title" class="text-center">Vulnerable DOM Message Displayer</h2>
+
+<script>
+    var userMessage = new URL(window.location.href).searchParams.get("msg");
+    if (userMessage) {
+        document.write(userMessage);
+    }
+</script>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="get" action="/VulnerableDOM/Message">
+            <div class="form-group">
+                <label for="msg">Enter your message:</label>
+                <input type="text" class="form-control" name="msg" id="msg" placeholder="Your message here...">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Display Message">
+        </form>
+    </div>
+</div>
